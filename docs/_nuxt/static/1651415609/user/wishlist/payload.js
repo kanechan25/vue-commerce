@@ -1,1 +1,1 @@
-__NUXT_JSONP__("/user/wishlist", {data:[{}],fetch:{},mutations:[]});
+__NUXT_JSONP__("/user/wishlist", { data: [{}], fetch: {}, mutations: [] })

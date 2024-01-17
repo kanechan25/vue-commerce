@@ -5,13 +5,13 @@
 </template>
 
 <script>
-  import VmSearch from '../search/Search';
+import VmSearch from "../search/Search"
 
-  export default {
-    name: 'VmSubheader',
+export default {
+  name: "VmSubheader",
 
-    components: {
-      VmSearch
-    }
+  components: {
+    VmSearch
   }
+}
 </script>

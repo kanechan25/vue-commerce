@@ -1,11 +1,11 @@
 {
   "name": "vuemmerce",
   "version": "1.1.0",
-  "description": "Ecommerce template built with Vue.js and Nuxt.js",
-  "author": "ivan lori <ivan.lori@protonmail.com>",
+  "description": "Ecommerce with Vue.js and Nuxt.js",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate"
+    "build": "nuxt generate",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",

@@ -13,47 +13,41 @@
 </template>
 
 <script>
-import VmProductsList from '@/components/Products';
-import { getByTitle } from '@/assets/filters';
+import VmProductsList from "@/components/Products"
+import { getByTitle } from "@/assets/filters"
 
 export default {
-	name: 'user-wishlist',
+  name: "user-wishlist",
 
-	data () {
+  data() {
     return {
-      pageTitle: 'Your Wishlist',
-      noProductLabel: 'Your wishlist is empty'
+      pageTitle: "Your Wishlist",
+      noProductLabel: "Your wishlist is empty"
     }
   },
 
   components: { VmProductsList },
 
   computed: {
-    productsInWishlist () {
+    productsInWishlist() {
       if (this.$store.state.userInfo.hasSearched) {
-        return this.getProductByTitle();
+        return this.getProductByTitle()
       } else {
-        return this.$store.getters.productsAddedToFavourite;
+        return this.$store.getters.productsAddedToFavourite
       }
     }
   },
 
   methods: {
-    getProductByTitle () {
+    getProductByTitle() {
       const {
-        getters: {
-          productsAddedToFavourite
-        },
+        getters: { productsAddedToFavourite },
         state: {
-          userInfo: {
-            productTitleSearched
-          }
+          userInfo: { productTitleSearched }
         }
       } = this.$store
-      return this.productsFiltered = getByTitle(productsAddedToFavourite, productTitleSearched);
+      return (this.productsFiltered = getByTitle(productsAddedToFavourite, productTitleSearched))
     }
   }
 }
 </script>
-
-

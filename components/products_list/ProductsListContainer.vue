@@ -12,52 +12,47 @@
 </template>
 
 <script>
-import Products from '../Products';
-import { getByTitle } from '@/assets/filters';
+import Products from "../Products"
+import { getByTitle } from "@/assets/filters"
 
 export default {
-  name: 'productsList',
+  name: "productsList",
 
   components: {
     Products
   },
 
-  data () {
+  data() {
     return {
-      id: '',
-      noProductLabel: 'No product found'
-    };
+      id: "",
+      noProductLabel: "No product found"
+    }
   },
 
   computed: {
-    products () {
+    products() {
       const {
         products,
-        userInfo: {
-          hasSearched
-        }
+        userInfo: { hasSearched }
       } = this.$store.state
 
       if (hasSearched) {
-        return this.getProductByTitle();
+        return this.getProductByTitle()
       } else {
-        return products;
+        return products
       }
     }
   },
 
   methods: {
-    getProductByTitle () {
+    getProductByTitle() {
       const {
         products,
-        userInfo: {
-          productTitleSearched
-        }
+        userInfo: { productTitleSearched }
       } = this.$store.state
 
-      return getByTitle(products, productTitleSearched);
+      return getByTitle(products, productTitleSearched)
     }
   }
-
-};
+}
 </script>

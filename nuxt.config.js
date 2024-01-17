@@ -1,5 +1,5 @@
-const pkg = require("./package");
-const path = require('path')
+const pkg = require("./package")
+const path = require("path")
 
 module.exports = {
   target: "static",
@@ -110,13 +110,11 @@ module.exports = {
       },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+        href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
       },
       {
         rel: "stylesheet",
-        integrity:
-          "sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p",
+        integrity: "sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p",
         crossorigin: "anonymous",
         href: "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       }
@@ -131,7 +129,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.css'],
+  css: ["@/assets/css/main.css"],
 
   /*
    ** Plugins to load before mounting the App
@@ -141,10 +139,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxt/postcss8',
-    'nuxt-purgecss',
-  ],
+  modules: ["@nuxt/postcss8", "nuxt-purgecss"],
   /*
    ** Axios module configuration
    */
@@ -157,17 +152,17 @@ module.exports = {
   },
 
   purgeCSS: {
-    mode: 'postcss',
-    enabled: (process.env.NODE_ENV === 'production')
+    mode: "postcss",
+    enabled: process.env.NODE_ENV === "production"
   },
 
   build: {
     postcss: {
       plugins: {
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        'postcss-import': {},
-        'postcss-nested': {}
-      },
-    },
+        tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
+        "postcss-import": {},
+        "postcss-nested": {}
+      }
+    }
   }
-};
+}
